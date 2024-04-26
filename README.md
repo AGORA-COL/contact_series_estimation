@@ -1,3 +1,5 @@
+# Contact series estimation
+
 This script aims to estimate the contact time series for all departments based on the contact time series and mobility trends of Bogotá. By leveraging a proportion between the two metrics, it extrapolates the contact time series for the rest of the departments using their respective mobility trends. Below is an explanation of the code, broken down into its main components.
 
 ### Load and Preprocess Data
