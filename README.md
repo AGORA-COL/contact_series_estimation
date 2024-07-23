@@ -1,15 +1,14 @@
 # Contact series estimation
 
-This script aims to estimate the contact time series for all departments based on the contact time series and mobility trends of Bogotá. By leveraging a proportion between the two metrics, it extrapolates the contact time series for the rest of the departments using their respective mobility trends. Below is an explanation of the code, broken down into its main components.
+Here we try to estimate the contact time series for all departments based on the contact time series and mobility trends of Bogotá. By leveraging a proportion between the two metrics, it extrapolates the contact time series for the rest of the departments using their respective mobility trends. Below is an explanation of the code, broken down into its main components.
 
 ### Load and Preprocess Data
 
 1. **Community Survey Data for Bogotá (Department Code 11001)**:
-   - The script starts by loading a CSV file containing community survey data for Bogotá. This dataset includes dates and the total number of contacts reported on those dates.
+   - This dataset includes dates and the total number of contacts reported on those dates.
 
 2. **Mobility Trends Data for Bogotá**:
-   - Next, it loads mobility trends data for Bogotá, converting the 'date' column to datetime format.
-   - The mobility trend values are adjusted by calculating an exponentially weighted moving average (EWMA) with a smoothing factor `alpha`, and adding 1 to the result. This adjustment likely aims to normalize the mobility trend data and make it more comparable across time.
+   - The mobility trend values are adjusted by calculating an exponentially weighted moving average (EWMA) with a smoothing factor `alpha`, and adding 1 to the result. This adjustment aims to normalize the mobility trend data and make it more comparable across time.
 
 
 ### Estimation Process for Other Departments
